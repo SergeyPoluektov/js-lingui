@@ -6,7 +6,7 @@ module.exports = function(options) {
       "@babel/preset-env",
       {
         targets: {
-          node: 8,
+          node: 16,
           browsers: "> 1%, last 2 versions"
         },
         modules: options.modules === false ? false : "commonjs"

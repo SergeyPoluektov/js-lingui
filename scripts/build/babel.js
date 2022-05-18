@@ -64,7 +64,7 @@ module.exports = async function(bundle) {
       if (!filename.endsWith(".d.ts")) {
         const { code } = babel.transformFileSync(
           path.join(srcDir, filename),
-          babelConfig({ modules: true })
+          babelConfig({ modules: false })
         )
         fs.writeFileSync(mainOutputPath.replace(/\.ts$/, ".js"), code)
       } else {

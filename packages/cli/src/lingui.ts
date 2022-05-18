@@ -2,7 +2,7 @@
 
 import { helpMisspelledCommand } from "./api/utils"
 
-const program = require("commander")
+import program from "commander"
 
 let version
 try {
