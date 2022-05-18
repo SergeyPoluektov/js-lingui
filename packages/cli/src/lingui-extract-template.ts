@@ -1,5 +1,6 @@
 import chalk from "chalk"
 import program from "commander"
+import url from 'url'
 
 import { getConfig, LinguiConfig } from "@lingui/conf"
 
@@ -53,7 +54,7 @@ export default function command(
   return true
 }
 
-if (require.main === module) {
+if (import.meta.url === url.pathToFileURL(process.argv[1]).href) {
   program
     .option("--config <path>", "Path to the config file")
     .option("--verbose", "Verbose output")
